@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shivam Gupta — Product Manager</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -14,9 +13,9 @@
     --line: rgba(255,255,255,0.08); --line2: rgba(255,255,255,0.15);
     --text: #f0ede8; --text2: #9a9790; --text3: #5a5855;
     --accent: #c8a96e; --accent2: #e8c98e;
-    --serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
-    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --mono: 'DM Mono', 'Courier New', monospace;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
   }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; cursor: none; }
@@ -34,26 +33,27 @@
   .nav-links { display:flex; gap:36px; list-style:none; }
   .nav-links a { font-size:12px; color:var(--text2); text-decoration:none; letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; font-weight:400; }
   .nav-links a:hover { color:var(--accent); }
+  /* FIX 1: Let's Connect button opens LinkedIn */
   .nav-cta { font-size:11px; font-weight:500; color:var(--accent); text-decoration:none; letter-spacing:0.1em; text-transform:uppercase; border:1px solid rgba(200,169,110,0.3); padding:8px 20px; border-radius:2px; transition:all 0.2s; }
   .nav-cta:hover { background:var(--accent); color:var(--bg); }
 
   /* HERO */
   #hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; position:relative; overflow:hidden; }
   .hero-left { padding:160px 48px 80px; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:2; }
-  .hero-eyebrow { font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:28px; animation:fadeUp 0.8s 0.2s both; display:flex; align-items:center; gap:12px; }
+  .hero-eyebrow { font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:28px; display:flex; align-items:center; gap:12px; }
   .hero-eyebrow::before { content:''; display:block; width:32px; height:1px; background:var(--accent); }
-  .hero-name { font-family:var(--serif); font-size:clamp(52px,7vw,88px); line-height:1.0; letter-spacing:-0.03em; color:var(--text); animation:fadeUp 0.8s 0.4s both; }
+  .hero-name { font-family:var(--serif); font-size:clamp(52px,7vw,88px); line-height:1.0; letter-spacing:-0.03em; color:var(--text); }
   .hero-name em { font-style:italic; color:var(--accent); }
-  .hero-tagline { margin-top:28px; font-size:17px; color:var(--text2); font-weight:300; max-width:420px; line-height:1.65; animation:fadeUp 0.8s 0.6s both; }
+  .hero-tagline { margin-top:28px; font-size:17px; color:var(--text2); font-weight:300; max-width:420px; line-height:1.65; }
   .hero-tagline strong { color:var(--text); font-weight:400; }
-  .hero-actions { margin-top:48px; display:flex; gap:16px; align-items:center; animation:fadeUp 0.8s 0.8s both; }
+  .hero-actions { margin-top:48px; display:flex; gap:16px; align-items:center; }
   .btn-primary { background:var(--accent); color:var(--bg); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:14px 28px; border:none; border-radius:2px; text-decoration:none; cursor:none; transition:background 0.2s,transform 0.2s; display:inline-block; }
   .btn-primary:hover { background:var(--accent2); transform:translateY(-1px); }
   .btn-ghost { color:var(--text2); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; display:flex; align-items:center; gap:8px; transition:color 0.2s; cursor:none; }
   .btn-ghost:hover { color:var(--text); }
   .btn-ghost svg { transition:transform 0.2s; }
   .btn-ghost:hover svg { transform:translateX(4px); }
-  .hero-stats { margin-top:64px; display:flex; gap:48px; animation:fadeUp 0.8s 1s both; border-top:1px solid var(--line); padding-top:36px; }
+  .hero-stats { margin-top:64px; display:flex; gap:48px; border-top:1px solid var(--line); padding-top:36px; }
   .stat-num { font-family:var(--serif); font-size:36px; font-weight:600; color:var(--text); letter-spacing:-0.02em; line-height:1; }
   .stat-num span { color:var(--accent); }
   .stat-label { font-size:11px; color:var(--text3); letter-spacing:0.07em; text-transform:uppercase; margin-top:6px; }
@@ -62,10 +62,11 @@
   .hero-circle { width:480px; height:480px; border:1px solid var(--line); border-radius:50%; position:absolute; animation:spin 40s linear infinite; }
   .hero-circle:nth-child(2) { width:340px; height:340px; border-color:rgba(200,169,110,0.1); animation-direction:reverse; animation-duration:28s; }
   .hero-circle:nth-child(3) { width:200px; height:200px; border-color:rgba(200,169,110,0.18); animation-duration:16s; }
-  .center-badge { width:108px; height:108px; border:1px solid rgba(200,169,110,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; background:rgba(200,169,110,0.05); position:relative; z-index:2; text-align:center; }
+  .center-badge { width:108px; height:108px; border:1px solid rgba(200,169,110,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; background:rgba(200,169,110,0.05); position:relative; z-index:2; text-align:center; gap:2px; }
   .center-badge-line1 { font-family:var(--serif); font-size:13px; color:var(--accent); line-height:1.3; }
+  /* FIX 3: removed GCC from badge */
   .center-badge-line2 { font-family:var(--mono); font-size:9px; color:var(--text3); letter-spacing:0.1em; text-transform:uppercase; margin-top:5px; }
-  .hero-scroll-indicator { position:absolute; bottom:40px; left:48px; display:flex; align-items:center; gap:12px; font-family:var(--mono); font-size:10px; color:var(--text3); letter-spacing:0.12em; text-transform:uppercase; animation:fadeUp 0.8s 1.4s both; }
+  .hero-scroll-indicator { position:absolute; bottom:40px; left:48px; display:flex; align-items:center; gap:12px; font-family:var(--mono); font-size:10px; color:var(--text3); letter-spacing:0.12em; text-transform:uppercase; }
   .scroll-line { width:40px; height:1px; background:var(--text3); position:relative; overflow:hidden; }
   .scroll-line::after { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:var(--accent); animation:scrollLine 2s ease-in-out infinite; }
 
@@ -110,25 +111,33 @@
   .impact-label { font-size:13px; color:var(--text2); line-height:1.5; }
   .impact-source { font-family:var(--mono); font-size:9px; color:var(--text3); letter-spacing:0.1em; text-transform:uppercase; margin-top:16px; }
 
-  /* ============================================================
-     WORK SECTION
-     Experience cards: no click, hover only
-     Case study cards: arrow, deep links to Notion
-  ============================================================ */
+  /* WORK — FIX 7: split into Experience + Case Studies */
   #work { padding:120px 48px; border-bottom:1px solid var(--line); }
   .work-header { display:grid; grid-template-columns:200px 1fr; margin-bottom:64px; }
   .work-section-label { font-family:var(--mono); font-size:10px; color:var(--text3); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:24px; display:flex; align-items:center; gap:14px; }
   .work-section-label::after { content:''; flex:1; height:1px; background:var(--line); }
   .work-section-gap { height:64px; }
-  .work-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
 
-  /* Experience card — hover effect only, no pointer, no link behaviour */
-  .exp-card { background:var(--bg); padding:40px; position:relative; overflow:hidden; transition:background 0.3s; display:block; cursor:default; }
+  .work-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
+  /* Experience cards — no arrow, not clickable-styled */
+  .exp-card { background:var(--bg); padding:40px; position:relative; overflow:hidden; transition:background 0.3s; display:block; text-decoration:none; cursor:default; }
   .exp-card:hover { background:var(--bg2); }
   .exp-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--accent); transition:width 0.4s cubic-bezier(.23,1,.32,1); }
   .exp-card:hover::after { width:100%; }
+  /* Case study cards — have arrow, open link */
+  .cs-card { background:var(--bg); padding:40px; position:relative; overflow:hidden; transition:background 0.3s; cursor:default; display:block; }
+  .cs-card:hover { background:var(--bg2); }
+  .cs-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--accent); transition:width 0.4s cubic-bezier(.23,1,.32,1); }
+  .cs-card:hover::after { width:100%; }
+  .work-card-num { font-family:var(--mono); font-size:11px; color:var(--text3); letter-spacing:0.1em; margin-bottom:20px; }
+  .work-card-type { display:inline-block; font-family:var(--mono); font-size:9px; color:var(--accent); border:1px solid rgba(200,169,110,0.3); padding:3px 9px; letter-spacing:0.12em; text-transform:uppercase; border-radius:2px; margin-bottom:14px; }
+  .work-card-title { font-family:var(--serif); font-size:20px; color:var(--text); letter-spacing:-0.01em; line-height:1.25; margin-bottom:12px; }
+  .work-card-desc { font-size:13px; color:var(--text2); line-height:1.65; padding-bottom:8px; }
+  .work-card-arrow { position:absolute; bottom:28px; right:28px; width:34px; height:34px; border:1px solid var(--line2); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s; }
+  .cs-card:hover .work-card-arrow { background:var(--accent); border-color:var(--accent); }
+  .cs-card:hover .work-card-arrow svg { stroke:var(--bg); }
 
-  /* Featured exp card spans full width */
+  /* Featured exp card — full width */
   .exp-card.featured { grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; background:var(--bg2); padding:60px; }
   .exp-card.featured:hover { background:var(--bg3); }
   .featured-label { font-family:var(--mono); font-size:9px; color:var(--accent); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px; display:flex; align-items:center; gap:10px; }
@@ -142,21 +151,6 @@
   .metric-value span { color:var(--accent); }
   .metric-label { font-size:11px; color:var(--text3); letter-spacing:0.04em; line-height:1.4; }
 
-  /* Case study card — clickable, has arrow */
-  .cs-card { background:var(--bg); padding:40px; position:relative; overflow:hidden; transition:background 0.3s; cursor:none; text-decoration:none; display:block; }
-  .cs-card:hover { background:var(--bg2); }
-  .cs-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--accent); transition:width 0.4s cubic-bezier(.23,1,.32,1); }
-  .cs-card:hover::after { width:100%; }
-  .work-card-type { display:inline-block; font-family:var(--mono); font-size:9px; color:var(--accent); border:1px solid rgba(200,169,110,0.3); padding:3px 9px; letter-spacing:0.12em; text-transform:uppercase; border-radius:2px; margin-bottom:14px; }
-  .work-card-title { font-family:var(--serif); font-size:20px; color:var(--text); letter-spacing:-0.01em; line-height:1.25; margin-bottom:12px; }
-  .work-card-desc { font-size:13px; color:var(--text2); line-height:1.65; padding-bottom:52px; }
-  .work-card-arrow { position:absolute; bottom:28px; right:28px; width:34px; height:34px; border:1px solid var(--line2); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s; }
-  .cs-card:hover .work-card-arrow { background:var(--accent); border-color:var(--accent); }
-  .cs-card:hover .work-card-arrow svg { stroke:var(--bg); }
-
-  /* Past work label for IOps card */
-  .past-work-label { font-family:var(--mono); font-size:9px; color:var(--text3); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:14px; }
-
   /* AWARDS */
   #awards { padding:100px 48px; border-bottom:1px solid var(--line); display:grid; grid-template-columns:200px 1fr; }
   .awards-list { display:flex; flex-direction:column; }
@@ -166,21 +160,15 @@
   .award-name { font-family:var(--serif); font-size:18px; color:var(--text); letter-spacing:-0.01em; margin-bottom:4px; }
   .award-desc { font-size:13px; color:var(--text2); }
 
-  /* ============================================================
-     TESTIMONIALS — redesigned: large pull quote style
-  ============================================================ */
+  /* TESTIMONIALS — pull quote layout */
   #testimonial { padding:120px 48px; border-bottom:1px solid var(--line); }
   .testimonial-header { display:grid; grid-template-columns:200px 1fr; margin-bottom:80px; }
-
-  .testy-block { padding:64px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 360px; gap:80px; align-items:start; }
+  .testy-block { padding:64px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 320px; gap:80px; align-items:start; }
   .testy-block:last-child { border-bottom:1px solid var(--line); }
-
   .testy-quote-mark { font-family:var(--serif); font-size:64px; color:var(--accent); line-height:0.8; margin-bottom:24px; opacity:0.5; }
-  .testy-quote { font-family:var(--serif); font-size:clamp(16px,2vw,20px); color:var(--text); line-height:1.65; letter-spacing:-0.01em; }
-  .testy-quote p + p { margin-top:1.2em; }
-
+  .testy-quote { font-family:var(--serif); font-size:clamp(15px,1.8vw,19px); color:var(--text); line-height:1.7; letter-spacing:-0.01em; }
+  .testy-quote p+p { margin-top:1.2em; }
   .testy-meta { padding-top:8px; }
-  .testy-avatar-area { display:none; }
   .testy-name { font-family:var(--serif); font-size:18px; color:var(--text); letter-spacing:-0.01em; margin-bottom:6px; }
   .testy-role { font-size:13px; color:var(--text2); line-height:1.5; margin-bottom:10px; }
   .testy-context { font-family:var(--mono); font-size:10px; color:var(--accent); letter-spacing:0.08em; text-transform:uppercase; display:flex; align-items:center; gap:8px; }
@@ -190,6 +178,7 @@
   #contact { padding:120px 48px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
   .contact-headline { font-family:var(--serif); font-size:clamp(38px,5vw,68px); line-height:1.05; letter-spacing:-0.03em; color:var(--text); }
   .contact-headline em { color:var(--accent); font-style:italic; }
+  /* FIX 9: updated copy */
   .contact-sub { margin-top:24px; font-size:15px; color:var(--text2); max-width:380px; line-height:1.7; }
   .contact-links { display:flex; flex-direction:column; }
   .contact-link { display:flex; align-items:center; justify-content:space-between; padding:22px 0; border-bottom:1px solid var(--line); text-decoration:none; transition:padding-left 0.3s; cursor:none; }
@@ -204,24 +193,16 @@
   .footer-avail { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:10px; color:var(--text3); letter-spacing:0.06em; }
   .avail-dot { width:6px; height:6px; background:#4caf7d; border-radius:50%; animation:pulse 2.5s ease-in-out infinite; }
 
-  /* === HERO VISIBILITY GUARANTEE — overrides any animation state === */
-  .hero-left, .hero-eyebrow, .hero-name, .hero-tagline,
-  .hero-actions, .hero-stats, .hero-scroll-indicator {
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-  }
-
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
   @keyframes spin { to{transform:rotate(360deg)} }
   @keyframes scrollLine { 0%{left:-100%} 50%{left:0%} 100%{left:100%} }
   @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(76,175,125,0.5)} 50%{opacity:0.8;box-shadow:0 0 0 4px rgba(76,175,125,0)} }
 
-  .reveal { opacity:0; transform:translateY(32px); transition:opacity 0.7s cubic-bezier(.23,1,.32,1),transform 0.7s cubic-bezier(.23,1,.32,1); }
-  .reveal.visible { opacity:1; transform:translateY(0); }
-  .reveal-delay-1 { transition-delay:0.1s; }
-  .reveal-delay-2 { transition-delay:0.2s; }
-  .reveal-delay-3 { transition-delay:0.3s; }
+  .reveal { opacity:1; transform:none; }
+  .reveal.visible { opacity:1; transform:none; }
+
+
+
 
   @media (max-width:960px) {
     nav { padding:20px 24px; }
@@ -257,6 +238,7 @@
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
+<!-- FIX 1: "Let's Connect" opens LinkedIn -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">Shivam Gupta</a>
   <ul class="nav-links">
@@ -272,8 +254,10 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
+    <!-- FIX 2: Dubai, UAE · India (no GCC) -->
     <div class="hero-eyebrow">Product Manager · Dubai, UAE · India</div>
     <h1 class="hero-name">Shivam<br><em>Gupta</em></h1>
+    <!-- FIX 4: rephrased tagline — no "factory floors" misread -->
     <p class="hero-tagline">
       I build <strong>AI-powered products</strong> that scale — from enterprise manufacturing intelligence to 30M+ consumer users.<br>
       Engineer by training. Product mind by design. 7+ years shipping what matters.
@@ -286,17 +270,30 @@
       </a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">7<span>+</span></div><div class="stat-label">Years in tech</div></div>
-      <div><div class="stat-num">30<span>M</span></div><div class="stat-label">Users reached</div></div>
-      <div><div class="stat-num">95<span>%</span></div><div class="stat-label">GenAI accuracy</div></div>
+      <div>
+        <div class="stat-num">7<span>+</span></div>
+        <div class="stat-label">Years in tech</div>
+      </div>
+      <div>
+        <div class="stat-num">30<span>M</span></div>
+        <div class="stat-label">Users reached</div>
+      </div>
+      <div>
+        <div class="stat-num">95<span>%</span></div>
+        <div class="stat-label">GenAI accuracy</div>
+      </div>
     </div>
-    <div class="hero-scroll-indicator"><div class="scroll-line"></div>Scroll to explore</div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
   </div>
   <div class="hero-right">
     <div class="hero-graphic">
       <div class="hero-circle"></div>
       <div class="hero-circle"></div>
       <div class="hero-circle"></div>
+      <!-- FIX 3: Dubai · India, no GCC -->
       <div class="center-badge">
         <div class="center-badge-line1">PM &amp;<br>Builder</div>
         <div class="center-badge-line2">Dubai · India</div>
@@ -309,6 +306,7 @@
 <section id="about">
   <div class="section-index reveal">01 — About</div>
   <div class="section-title reveal reveal-delay-1">From code<br>to product.<br><em>By choice.</em></div>
+  <!-- FIX 5: clarified BA & PM at Deloitte -->
   <div class="about-body reveal reveal-delay-2">
     <p>I started as a backend engineer — writing code, living the constraints, understanding the tradeoffs. That foundation permanently changed how I think about product.</p>
     <p>Over 7+ years I've moved from building retail systems at <strong>Cognizant</strong>, to Business Analyst and then <strong>Product Manager at Deloitte</strong> — owning full product surfaces at the intersection of AI, enterprise SaaS, and consumer scale.</p>
@@ -329,10 +327,11 @@
       <div>
         <div class="tl-role">APM — MarTech & Growth</div>
         <div class="tl-company">Almosafer · Dubai, UAE</div>
-        <div class="tl-desc">Owning Homepage, SEO, and Communications on one of the GCC's largest OTAs serving 30M+ annual users. Scaling top-of-funnel growth, launching a modular CMS Page Builder, and building an email platform from ad hoc sends to ~20M annual sends.</div>
+        <div class="tl-desc">Owning Homepage, SEO, and Communications on one of the GCC's largest OTAs serving 30M+ annual users. Scaling top-of-funnel growth, launching a modular CMS Page Builder, and building an email platform from ad hoc sends to ~20M annual sends with personalization on the roadmap.</div>
         <div class="tl-tags"><span class="tag">MarTech</span><span class="tag">SEO / GEO / AEO</span><span class="tag">Growth</span><span class="tag">OTA</span><span class="tag">B2C / B2B</span></div>
       </div>
     </div>
+    <!-- FIX 6: Product Manager (not Consultant) -->
     <div class="tl-item reveal">
       <div class="tl-year">Sept 2023 — May 2025</div>
       <div>
@@ -342,6 +341,7 @@
         <div class="tl-tags"><span class="tag">GenAI</span><span class="tag">B2B SaaS</span><span class="tag">Smart Factory</span><span class="tag">Roadmap</span><span class="tag">Enterprise</span></div>
       </div>
     </div>
+    <!-- FIX 5: BA role clearly labelled -->
     <div class="tl-item reveal">
       <div class="tl-year">Oct 2021 — Aug 2023</div>
       <div>
@@ -370,29 +370,59 @@
     <div class="section-title reveal reveal-delay-1">Numbers that <em>matter.</em></div>
   </div>
   <div class="impact-grid">
-    <div class="impact-cell reveal"><div class="impact-num">$126<span>M</span></div><div class="impact-label">Gross Booking Value driven through SEO &amp; growth initiatives</div><div class="impact-source">Almosafer · 2025</div></div>
-    <div class="impact-cell reveal reveal-delay-1"><div class="impact-num">95<span>%</span></div><div class="impact-label">GenAI chatbot accuracy via knowledge graph LLM integration</div><div class="impact-source">Deloitte IOps · 2024</div></div>
-    <div class="impact-cell reveal reveal-delay-2"><div class="impact-num">80<span>%</span></div><div class="impact-label">Reduction in third-party data onboarding via API-first framework</div><div class="impact-source">Deloitte IOps · 2024</div></div>
-    <div class="impact-cell reveal reveal-delay-3"><div class="impact-num">20<span>M</span></div><div class="impact-label">Annual emails on the scaled MarTech platform</div><div class="impact-source">Almosafer · 2025</div></div>
-    <div class="impact-cell reveal"><div class="impact-num">70<span>%</span></div><div class="impact-label">Faster campaign deployment post email infrastructure migration</div><div class="impact-source">Almosafer · 2025</div></div>
-    <div class="impact-cell reveal reveal-delay-1"><div class="impact-num">$8<span>M</span></div><div class="impact-label">Annual influenced revenue on the IOps platform</div><div class="impact-source">Deloitte IOps · 2024</div></div>
-    <div class="impact-cell reveal reveal-delay-2"><div class="impact-num">3.5<span>M</span></div><div class="impact-label">Projected incremental sessions from SEO facet pages</div><div class="impact-source">Almosafer · Aug 2026</div></div>
-    <div class="impact-cell reveal reveal-delay-3"><div class="impact-num">85<span>%</span></div><div class="impact-label">Roadmap execution across multiple enterprise releases</div><div class="impact-source">Deloitte IOps · 2024</div></div>
+    <div class="impact-cell reveal">
+      <div class="impact-num">$126<span>M</span></div>
+      <div class="impact-label">Gross Booking Value driven through SEO &amp; growth initiatives</div>
+      <div class="impact-source">Almosafer · 2025</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-1">
+      <div class="impact-num">95<span>%</span></div>
+      <div class="impact-label">GenAI chatbot accuracy via knowledge graph LLM integration</div>
+      <div class="impact-source">Deloitte IOps · 2024</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-2">
+      <div class="impact-num">80<span>%</span></div>
+      <div class="impact-label">Reduction in third-party data onboarding via API-first framework</div>
+      <div class="impact-source">Deloitte IOps · 2024</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-3">
+      <div class="impact-num">20<span>M</span></div>
+      <div class="impact-label">Annual emails on the scaled MarTech platform</div>
+      <div class="impact-source">Almosafer · 2025</div>
+    </div>
+    <div class="impact-cell reveal">
+      <div class="impact-num">70<span>%</span></div>
+      <div class="impact-label">Faster campaign deployment post email infrastructure migration</div>
+      <div class="impact-source">Almosafer · 2025</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-1">
+      <div class="impact-num">$8<span>M</span></div>
+      <div class="impact-label">Annual influenced revenue on the IOps platform</div>
+      <div class="impact-source">Deloitte IOps · 2024</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-2">
+      <div class="impact-num">3.5<span>M</span></div>
+      <div class="impact-label">Projected incremental sessions from SEO facet pages</div>
+      <div class="impact-source">Almosafer · Aug 2026</div>
+    </div>
+    <div class="impact-cell reveal reveal-delay-3">
+      <div class="impact-num">85<span>%</span></div>
+      <div class="impact-label">Roadmap execution across multiple enterprise releases</div>
+      <div class="impact-source">Deloitte IOps · 2024</div>
+    </div>
   </div>
 </section>
 
-<!-- WORK -->
+<!-- WORK — FIX 7: Industry Experience and Case Studies clearly separated -->
 <section id="work">
   <div class="work-header">
     <div class="section-index reveal">04 — Work</div>
     <div class="section-title reveal reveal-delay-1">Experience &amp;<br><em>Case Studies.</em></div>
   </div>
 
-  <!-- Industry Experience — no click, hover only -->
+  <!-- Industry Experience -->
   <div class="work-section-label reveal">Industry Experience</div>
   <div class="work-grid reveal reveal-delay-1">
-
-    <!-- Almosafer featured — no link, no cursor -->
     <div class="exp-card featured">
       <div>
         <div class="featured-label">Current Role · Almosafer</div>
@@ -407,54 +437,54 @@
         <div class="metric-box"><div class="metric-value">70<span>%</span></div><div class="metric-label">Faster campaign deployment</div></div>
       </div>
     </div>
-
-    <!-- IOps — past work, with matching metrics, no click -->
-    <div class="exp-card" style="grid-column: 1 / -1; display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; background:var(--bg2); padding:60px;">
-      <div>
-        <div class="featured-label">Past Role · Deloitte</div>
-        <div class="featured-title">IOps — Smart Factory AI Platform</div>
-        <div class="featured-desc">B2B SaaS for enterprise manufacturing intelligence. As Product Manager, I owned the full roadmap — 8 feature modules including Predictive Maintenance, Digital Twin, and the GenCI AI Assistant. Shipped a knowledge-graph LLM integration and drove 70% sales demo conversion.</div>
-        <div class="tl-tags" style="margin-top:18px;"><span class="tag">GenAI</span><span class="tag">B2B SaaS</span><span class="tag">Smart Factory</span><span class="tag">Roadmap</span><span class="tag">Enterprise</span></div>
-      </div>
-      <div class="featured-metrics">
-        <div class="metric-box"><div class="metric-value">95<span>%</span></div><div class="metric-label">GenAI chatbot accuracy</div></div>
-        <div class="metric-box"><div class="metric-value">$8<span>M</span></div><div class="metric-label">Annual influenced revenue</div></div>
-        <div class="metric-box"><div class="metric-value">70<span>%</span></div><div class="metric-label">Sales demo conversion</div></div>
-        <div class="metric-box"><div class="metric-value">85<span>%</span></div><div class="metric-label">Roadmap execution rate</div></div>
-      </div>
+    <div class="exp-card featured" style="background:var(--bg);">
+      <div class="featured-label">Past Role · Deloitte</div>
+      <div class="featured-title">IOps — Smart Factory AI Platform</div>
+      <div class="featured-desc">B2B SaaS for enterprise manufacturing intelligence. As Product Manager, I owned the full roadmap across 8 modules including Predictive Maintenance, Digital Twin, and the GenCI AI Assistant. Shipped a knowledge-graph LLM and drove 70% sales demo conversion.</div>
+      <div class="tl-tags" style="margin-top:18px;"><span class="tag">GenAI</span><span class="tag">B2B SaaS</span><span class="tag">Smart Factory</span><span class="tag">Roadmap</span><span class="tag">Enterprise</span></div>
     </div>
-
+    <div class="featured-metrics">
+      <div class="metric-box"><div class="metric-value">95<span>%</span></div><div class="metric-label">GenAI chatbot accuracy</div></div>
+      <div class="metric-box"><div class="metric-value">$8<span>M</span></div><div class="metric-label">Annual influenced revenue</div></div>
+      <div class="metric-box"><div class="metric-value">70<span>%</span></div><div class="metric-label">Sales demo conversion</div></div>
+      <div class="metric-box"><div class="metric-value">85<span>%</span></div><div class="metric-label">Roadmap execution rate</div></div>
+    </div>
+    </div>
   </div>
 
   <div class="work-section-gap"></div>
 
-  <!-- Case Studies — arrows, deep Notion links -->
+  <!-- Case Studies -->
   <div class="work-section-label reveal">Case Studies</div>
   <div class="work-grid reveal reveal-delay-1">
-    <a href="https://shivam--gupta.notion.site/Mudrex-Teardown-TPF-Sept-22-Top-5-a4a2e5f99d7d49389d928f0733b37efe?pvs=25" target="_blank" class="cs-card">
+    <div class="cs-card">
+      <div class="work-card-num">01</div>
       <div class="work-card-type">Product Teardown · Top 5</div>
       <div class="work-card-title">Mudrex — Crypto Investing Teardown</div>
       <div class="work-card-desc">Deep teardown of UX, monetization, and growth loops. Ranked Top 5 in The Product Folks September '22 cohort.</div>
       <div class="work-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 11.5l9-9M4 2.5h7.5V10"/></svg></div>
-    </a>
-    <a href="https://shivam--gupta.notion.site/Roadmap-GTM-for-Freight-Procurement-Marketplace-0c24ea2efd76494099ea5010e152bfef?pvs=2" target="_blank" class="cs-card">
+    </div>
+    <div class="cs-card">
+      <div class="work-card-num">02</div>
       <div class="work-card-type">Strategy · GTM</div>
       <div class="work-card-title">Freight Procurement Marketplace — Roadmap &amp; GTM</div>
       <div class="work-card-desc">End-to-end product roadmap and go-to-market strategy. Target segments, pricing model, and phased launch sequencing for a B2B logistics platform.</div>
       <div class="work-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 11.5l9-9M4 2.5h7.5V10"/></svg></div>
-    </a>
-    <a href="https://shivam--gupta.notion.site/Monetisation-for-Meesho-59ae38a40c0a40029bfd2e8d73d3f6be?pvs=25" target="_blank" class="cs-card">
+    </div>
+    <div class="cs-card">
+      <div class="work-card-num">03</div>
       <div class="work-card-type">Monetisation Strategy</div>
       <div class="work-card-title">Meesho — Monetisation Framework</div>
       <div class="work-card-desc">Analysed Meesho's reseller marketplace and designed a monetisation model balancing supplier economics, seller incentives, and platform take-rate.</div>
       <div class="work-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 11.5l9-9M4 2.5h7.5V10"/></svg></div>
-    </a>
-    <a href="https://shivam--gupta.notion.site/PRD-and-User-Journey-for-CloudEagle-ai-205c0f91c0b5803b8e07d47add62d3e0?pvs=25" target="_blank" class="cs-card">
+    </div>
+    <div class="cs-card">
+      <div class="work-card-num">04</div>
       <div class="work-card-type">PRD · User Research</div>
       <div class="work-card-title">CloudEagle.ai — PRD &amp; User Journey</div>
       <div class="work-card-desc">Full PRD and user journey for a SaaS spend management product. Personas, jobs-to-be-done, and feature specs for the core onboarding flow.</div>
       <div class="work-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 11.5l9-9M4 2.5h7.5V10"/></svg></div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -464,30 +494,38 @@
   <div class="awards-list reveal reveal-delay-1">
     <div class="award-item">
       <div class="award-year">Apr 2024</div>
-      <div><div class="award-name">Deloitte Applause Award</div><div class="award-desc">Recognised for GenAI product excellence — knowledge graph + LLM integration achieving 95% accuracy on IOps.</div></div>
+      <div>
+        <div class="award-name">Deloitte Applause Award</div>
+        <div class="award-desc">Recognised for GenAI product excellence — knowledge graph + LLM integration achieving 95% accuracy on IOps.</div>
+      </div>
     </div>
     <div class="award-item">
       <div class="award-year">Jul 2023</div>
-      <div><div class="award-name">Deloitte SPOT Award</div><div class="award-desc">Identified a critical architectural flaw pre-launch that would have caused system failure at 3× data volume — preventing a production outage.</div></div>
+      <div>
+        <div class="award-name">Deloitte SPOT Award</div>
+        <div class="award-desc">Identified a critical architectural flaw pre-launch that would have caused system failure at 3× data volume — preventing a production outage.</div>
+      </div>
     </div>
     <div class="award-item">
       <div class="award-year">Sept 2022</div>
-      <div><div class="award-name">Top 5 — The Product Folks</div><div class="award-desc">Ranked Top 5 in the TPF September '22 Product Teardown cohort.</div></div>
+      <div>
+        <div class="award-name">Top 5 — The Product Folks</div>
+        <div class="award-desc">Ranked Top 5 in the TPF September '22 Product Teardown cohort.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS — redesigned pull-quote layout -->
+<!-- TESTIMONIALS -->
 <section id="testimonial">
   <div class="testimonial-header">
     <div class="section-index reveal">06 — Testimonials</div>
     <div class="section-title reveal reveal-delay-1">What others <em>say.</em></div>
   </div>
 
-  <!-- Chris Como -->
   <div class="testy-block reveal">
     <div>
-      <div class="testy-quote-mark">"</div>
+      <div class="testy-quote-mark">&ldquo;</div>
       <div class="testy-quote">
         <p>I had the pleasure of working with Shivam as a Product Owner on my team. Shivam brought clarity, structure, and thoughtful prioritization to complex product initiatives. He had a strength for turning ambiguous business needs into actionable backlog items, and always kept the user and value front and center.</p>
         <p>What truly set Shivam apart was his calm leadership under pressure, his collaborative spirit, and his ability to bring our cross-functional teams together with purpose. He was dependable, detail-oriented, and a trusted partner in our agile delivery process.</p>
@@ -495,41 +533,41 @@
       </div>
     </div>
     <div class="testy-meta">
-      <div class="testy-avatar-area"><div class="testy-initials">CC</div></div>
       <div class="testy-name">Chris Como</div>
       <div class="testy-role">Assoc VP, Product Strategy<br>Smart Manufacturing</div>
-      <div class="testy-context">Managed Shivam directly · July 2025</div>
+      <div class="testy-context">Managed Shivam directly &middot; July 2025</div>
     </div>
   </div>
 
-  <!-- Amit Raj -->
   <div class="testy-block reveal reveal-delay-1">
     <div>
-      <div class="testy-quote-mark">"</div>
+      <div class="testy-quote-mark">&ldquo;</div>
       <div class="testy-quote">
         <p>Shivam is amazing at understanding the requirement of what needs to be accomplished. He is well organized, diligent, and a fast learner. He always takes a well-rounded approach to solve a given problem.</p>
         <p>It was a pleasure to work with him.</p>
       </div>
     </div>
     <div class="testy-meta">
-      <div class="testy-avatar-area"><div class="testy-initials">AR</div></div>
       <div class="testy-name">Amit Raj</div>
       <div class="testy-role">Director of Data Engineering<br>Camping World</div>
-      <div class="testy-context">Managed Shivam directly · Oct 2022</div>
+      <div class="testy-context">Managed Shivam directly &middot; October 2022</div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT — FIX 9: updated copy, Let's Connect, Based in Dubai. From India -->
+<!-- FIX 10: correct LinkedIn, FIX 11: no Notion or Resume links -->
 <section id="contact">
   <div>
     <div class="contact-headline reveal">Let's build<br>something <em>real.</em></div>
-    <p class="contact-sub reveal reveal-delay-1">Open to PM roles at global product companies — consumer, B2B, AI-native. Based in Dubai. From India. If you're building something ambitious, let's connect.</p>
+    <p class="contact-sub reveal reveal-delay-1">
+      Open to PM roles at global product companies — consumer, B2B, AI-native. Based in Dubai. From India. If you're building something ambitious, let's connect.
+    </p>
   </div>
   <div class="contact-links reveal reveal-delay-2">
-    <a href="/cdn-cgi/l/email-protection#680f1d181c09461b00011e0905465a5d5d5a280f05090104460b0705" class="contact-link">
+    <a href="/cdn-cgi/l/email-protection#294e5c595d48075a41405f4844071b1c1c1b694e44484045074a4644" class="contact-link">
       <span class="contact-link-name">Email</span>
-      <span class="contact-link-detail"><span class="__cf_email__" data-cfemail="7b1c0e0b0f1a550813120d1a1655494e4e493b1c161a121755181416">[email&#160;protected]</span></span>
+      <span class="contact-link-detail"><span class="__cf_email__" data-cfemail="6e091b1e1a0f401d0607180f03405c5b5b5c2e09030f0702400d0103">[email&#160;protected]</span></span>
     </a>
     <a href="https://www.linkedin.com/in/guptashivam2552/" target="_blank" class="contact-link">
       <span class="contact-link-name">LinkedIn</span>
